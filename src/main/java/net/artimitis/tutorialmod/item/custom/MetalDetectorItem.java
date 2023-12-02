@@ -47,10 +47,20 @@ public class MetalDetectorItem extends Item {
 
     private void outputValuableCoordinate(BlockPos blockPos, PlayerEntity player, Block block) {
         player.sendMessage(Text.literal("Found " + block.asItem().getName().getString() + " at " +
-                "(" + blockPos.getX() + ", " + blockPos.getY() + ", " + blockPos.getZ() + ")"), false);
+                "Y-Level " + blockPos.getY() + "."), false);
     }
 
     private boolean isValuableBlock(BlockState state) {
-        return state.isOf(Blocks.IRON_ORE) || state.isOf(Blocks.DIAMOND_ORE) || state.isOf(ModBlocks.RUBY_ORE);
+        return state.isOf(Blocks.IRON_ORE) || state.isOf(Blocks.DEEPSLATE_IRON_ORE) ||
+                state.isOf(Blocks.DIAMOND_ORE) || state.isOf(Blocks.DEEPSLATE_DIAMOND_ORE) ||
+                state.isOf(Blocks.COAL_ORE) || state.isOf(Blocks.DEEPSLATE_COAL_ORE) ||
+                state.isOf(Blocks.COPPER_ORE) || state.isOf(Blocks.DEEPSLATE_COPPER_ORE) ||
+                state.isOf(Blocks.GOLD_ORE) || state.isOf(Blocks.DEEPSLATE_GOLD_ORE) ||
+                state.isOf(Blocks.REDSTONE_ORE) || state.isOf(Blocks.DEEPSLATE_REDSTONE_ORE) ||
+                state.isOf(Blocks.EMERALD_ORE) || state.isOf(Blocks.DEEPSLATE_EMERALD_ORE) ||
+                state.isOf(Blocks.LAPIS_ORE) || state.isOf(Blocks.DEEPSLATE_LAPIS_ORE) ||
+                state.isOf(Blocks.NETHER_GOLD_ORE) || state.isOf(Blocks.NETHER_QUARTZ_ORE) ||
+                state.isOf(ModBlocks.RUBY_ORE) || state.isOf(ModBlocks.DEEPSLATE_RUBY_ORE) ||
+                state.isOf(ModBlocks.END_STONE_RUBY_ORE) || state.isOf(ModBlocks.NETHER_RUBY_ORE);
     }
 }

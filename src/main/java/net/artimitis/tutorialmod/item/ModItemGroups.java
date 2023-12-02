@@ -23,6 +23,8 @@ public class ModItemGroups {
 
                         entries.add(ModItems.METAL_DETECTOR);
 
+                        entries.add(ModItems.GRAPHITE_INGOT);
+
                         entries.add(ModBlocks.DEEPSLATE_RUBY_ORE);
                         entries.add(ModBlocks.END_STONE_RUBY_ORE);
                         entries.add(ModBlocks.RUBY_ORE);
